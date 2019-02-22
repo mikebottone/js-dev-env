@@ -23,3 +23,7 @@ Starter kit for a javascript develop environment with linting, testing, bundling
 ->prestart script will run (displaying a msg in the console) before the start script when "npm start" is entered in the terminal
 ->start script will start the app ==> "npm start"
 ->share script will share the local host on localtunnel ==> "npm run share"
+
+*TRANSPILING -compiles ES6 down to js*
+-> Typescript (more like java): superset of javascript which adds in type annotations and interfaces, type safety, enhanced autocomplete, readability
+-> Babel (more like JS): written in standardized js, leverage full JS ecosystem, can use experimental features, no type definitions/annotations required, less type related issues
