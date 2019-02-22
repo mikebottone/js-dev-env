@@ -9,15 +9,17 @@ Starter kit for a javascript develop environment with linting, testing, bundling
 (not necessary) -> copy the json from bit.ly/jsdevpackagejson and create a package.json file in the root directory
 -> install packages by entering "npm install" into the command line
 -> update to the latest packages by using "npm update"
-*might be depreciated -> globally install node security project by running "npm install -g nsp"
-    -> running "nsp check" will check for any vulnerabilities in the packages 
 
 *DEVELOPMENT WEB SERVER EXPRESS*
 -> this server config is found in buildScripts
--> To run it use "node buildScripts/srcServer.js"
+-> To run it use "node buildScripts/srcServer.js" or "npm start" in the terminal
 
-*localtunnel*: Shares work in progress by punching a hole in your firewall (so local machine can operate as a web server) and and exposes your local host via a public url 
+*localtunnel* -might not work due to firewall configurations: Shares work in progress by punching a hole in your firewall (so local machine can operate as a web server) and and exposes your local host via a public url 
 -> Setup: npm install localtunnel -g
           -start your app
-          -run command "lt --port 3000" in second terminal (copy the url and can be viewed by anyone while terminal is running)
+          -run command "lt --port 3000" in second terminal (copy the url and can be viewed by anyone while terminal is running) or "npm run share"
 
+*AUTOMATION - npm scripts in the package.json*
+->prestart script will run (displaying a msg in the console) before the start script when "npm start" is entered in the terminal
+->start script will start the app ==> "npm start"
+->share script will share the local host on localtunnel ==> "npm run share"
