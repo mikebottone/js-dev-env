@@ -27,3 +27,10 @@ Starter kit for a javascript develop environment with linting, testing, bundling
 *TRANSPILING -compiles ES6 down to js*
 -> Typescript (more like java): superset of javascript which adds in type annotations and interfaces, type safety, enhanced autocomplete, readability
 -> Babel (more like JS): written in standardized js, leverage full JS ecosystem, can use experimental features, no type definitions/annotations required, less type related issues
+
+*Bundling*
+->packages js into files into module formats readable by browser
+-> ES6 Modules: standardized, statically analyzable, easy to read, imports/exports
+-> Bundlers: take your js files and package them for target environment
+-> Webpack Bundler: intelligently bundles css, images, fonts, HTML; allows for bundle splitting and hot reloading
+->requires the webpack.config file
