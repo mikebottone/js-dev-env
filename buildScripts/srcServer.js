@@ -4,6 +4,9 @@ import open from 'open';
 import webpack from 'webpack';
 import config from '../webpack.config.dev';
 
+/* eslint-disable no-console */
+// no errors/warnings will be thrown is console.log is used in this file
+
 const port = 3000;
 const app = express();
 const compiler = webpack(config);

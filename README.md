@@ -21,8 +21,9 @@ Starter kit for a javascript develop environment with linting, testing, bundling
 
 *AUTOMATION - npm scripts in the package.json*
 ->prestart script will run (displaying a msg in the console) before the start script when "npm start" is entered in the terminal
-->start script will start the app ==> "npm start"
+->start script will start the app and lint it ==> "npm start"
 ->share script will share the local host on localtunnel ==> "npm run share"
+->lint script will check the files for the code standards and syntax specified ==> "npm run lint"
 
 *TRANSPILING -compiles ES6 down to js*
 -> Typescript (more like java): superset of javascript which adds in type annotations and interfaces, type safety, enhanced autocomplete, readability
@@ -34,3 +35,12 @@ Starter kit for a javascript develop environment with linting, testing, bundling
 -> Bundlers: take your js files and package them for target environment
 -> Webpack Bundler: intelligently bundles css, images, fonts, HTML; allows for bundle splitting and hot reloading
 ->requires the webpack.config file
+
+*Linting*
+->checks the code at compile time to enforce coding consistency in style and syntax, helps to avoid mistakes
+->ESLint is a linter: config format, choose built in rules, choose warnings (can still be committed) vs errors (stop development), plugins
+-> eslint-watch to check the files
+->can config in separate file or include in package.json
+-> when creating rules in the eslint: 0 = off, 1 = Warning, 2 = Error
+-> lint script was added to the package.json to provide linting to the files after "esw" (eswatch) => command "npm run lint"
+
