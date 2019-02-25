@@ -44,10 +44,22 @@ Starter kit for a javascript develop environment with linting, testing, bundling
 -> when creating rules in the eslint: 0 = off, 1 = Warning, 2 = Error
 -> lint script was added to the package.json to provide linting to the files after "esw" (eswatch) => command "npm run lint"
 
-*Testing and Continuous Integration (CI) with Mocha*
+*TESTING and CONTINUOUS INTEGRATION (CI) with Mocha*
 -> unit testing: single function/module
 -> This repo contains testing with mocha framework, the chai assertion library, JSDOM helper library, runs tests in node upon save/start
 -> CI Server: can run automated build after each commit, run test suite, check code coverage, and automate deployment
   ->Travis CI: linux/Mac environment server -- makes sure the build passes not fails
   ->Appveyor: Windows environment server
-->CI's will ensure build can run on both platforms, they are free and can be logged in through github 
+->CI's will ensure build can run on both platforms, they are free and can be logged in through github
+
+*HTTP CALLS*
+-> centalized api calls; one place to configure
+-> using "fetch"
+-> MOCK API to mock http requests and actions as if it was real data/services
+-> Using JSON Schema Faker to generate random data and JSON Server to change the data a save it
+  -> mock api's do not require actual http calls, instead they are simulated
+  -> libraries used to create fake data include faker.js, chance.js, and randexp.js within JSON Schema Faker
+  -> mockDataSchema.js provides the shape of the schema we are using following JSON.schema.org JSON schema standard
+  -> can read the docs on JSON Schema Faker for examples
+  -> JSON Server will parse the json file created and make a mock api for each top level object found
+  -> new fake data will be created after each start of the mock api server
