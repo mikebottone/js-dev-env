@@ -21,7 +21,7 @@ Starter kit for a javascript develop environment with linting, testing, bundling
 
 *AUTOMATION - npm scripts in the package.json*
 ->prestart script will run (displaying a msg in the console) before the start script when "npm start" is entered in the terminal
-->start script will start the app and lint it ==> "npm start"
+->start script will start the app, test, and lint it ==> "npm start"
 ->share script will share the local host on localtunnel ==> "npm run share"
 ->lint script will check the files for the code standards and syntax specified ==> "npm run lint"
 
@@ -44,3 +44,10 @@ Starter kit for a javascript develop environment with linting, testing, bundling
 -> when creating rules in the eslint: 0 = off, 1 = Warning, 2 = Error
 -> lint script was added to the package.json to provide linting to the files after "esw" (eswatch) => command "npm run lint"
 
+*Testing and Continuous Integration (CI) with Mocha*
+-> unit testing: single function/module
+-> This repo contains testing with mocha framework, the chai assertion library, JSDOM helper library, runs tests in node upon save/start
+-> CI Server: can run automated build after each commit, run test suite, check code coverage, and automate deployment
+  ->Travis CI: linux/Mac environment server -- makes sure the build passes not fails
+  ->Appveyor: Windows environment server
+->CI's will ensure build can run on both platforms, they are free and can be logged in through github 
