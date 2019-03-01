@@ -41,7 +41,7 @@ Starter kit for a javascript develop environment with linting, testing, bundling
 ->ESLint is a linter: config format, choose built in rules, choose warnings (can still be committed) vs errors (stop development), plugins
 -> eslint-watch to check the files
 ->can config in separate file or include in package.json
--> when creating rules in the eslint: 0 = off, 1 = Warning, 2 = Error
+-> when creating rules in the eslint: 0 = off, 1 = Warning, 2 = Error, can choose from a list of many rules found online
 -> lint script was added to the package.json to provide linting to the files after "esw" (eswatch) => command "npm run lint"
 
 *TESTING and CONTINUOUS INTEGRATION (CI) with Mocha*
@@ -63,3 +63,28 @@ Starter kit for a javascript develop environment with linting, testing, bundling
   -> can read the docs on JSON Schema Faker for examples
   -> JSON Server will parse the json file created and make a mock api for each top level object found
   -> new fake data will be created after each start of the mock api server
+
+Tips: 
+-> all js should be put in a js file 
+-> organize directory by features
+
+*PRODUCTION BUILD*
+-> the distServer NOT for actual production, it is just usefule for hosting the minified production build LOCALLY for debugging
+-> minification: speeds up page loads and saves bandwidth by shortening names, removing comments, unsused code & new line/whitespace when built (does not actually change what is written by us just condenses on build)
+-> to switch between the mock Api and production (hard coded data currently): run the app, it will load the prod data, to swtich to mockAPi add "/?useMockApi=true" into the url after 'localhost:3000'
+
+-> scripts to automate the prod build (npm run build)
+  -> build runs the build script for prod with the pre and post builds running respective to build
+  -> css is bundled in when build is run
+-> an html plugin from webpack (found in the webpack.config files) is used to generate html index file based off the src/index.html 
+-> the "inject: true" tells the webpack plugin to dynamically add in any necessary script tags 
+
+->Bundle splitting: splitting the bundles so that the user only has to download page specific bundles not all the libraries and everything during page reload
+-> vendor.js and all referenced libraries within it will be bundled separately as specified in the webpack.config.prod.js
+  -> you could add other bundles in the same manner
+
+-> Cache Busting: save HTTP Requests for up to a year & forces requests for the latest versions
+  -> this is done by hashing the bundle file name & generate the file dynamically 
+  -> a new hash is created only when a change to the bundle is made
+
+-> Error logging: can sign up for "TrackJS" for free and paste the install lines of code into the head of the html to track
