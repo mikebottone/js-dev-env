@@ -17,6 +17,7 @@ app.get('/', function(req, res){
   res.sendFile(path.join(__dirname,'../dist/index.html'));
 });
 
+//REMOVE app.get below because we will hit heroku instead
 app.get('/users', function(req, res) {
   //Hard coding for simplicity, usually would hit real DB
   res.json ([

@@ -88,3 +88,14 @@ Tips:
   -> a new hash is created only when a change to the bundle is made
 
 -> Error logging: can sign up for "TrackJS" for free and paste the install lines of code into the head of the html to track
+
+*PRODUCT DEPLOYMENT*
+-> Heroku: can go to devcenter.heroku.com to take the first steps to setting up a node.js deployment
+  -> follow th setup/deployment steps
+  -> use git bash to interact with the heroku CLI commands
+  -> usually contains an "app.json" to describe the app and a "Procfile" to tell heroku what command to run
+  -> can use surge to host static front end
+  -> "npm run deploy" command will run the app at a random url given by surge but also uses the heroku api to get the data
+  (must add the heroku url to the distServer for this to work)
+  -> Surge allows use of own domain or request a subdomain via command line flag
+  -> flow: npm start, npm run build, npm run deploy
